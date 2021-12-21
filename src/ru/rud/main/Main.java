@@ -2,6 +2,8 @@ package ru.rud.main;
 
 import ru.rud.trafficlight.TrafficLights;
 
+import ru.rud.unsorted.NewName;
+
 public class Main {
     public static void main(String[] args) {
 //        List<String> str = new ArrayList<>();
@@ -164,9 +166,8 @@ public class Main {
 //        stn.visit(scr);
 
 //        -----------CW 18.12.21------------
-
-
-
+        NewName a = new NewName.BuilderName().setName("Даниил").setSecondName("Александрович").build();
+        System.out.println(a);
 
 
 
