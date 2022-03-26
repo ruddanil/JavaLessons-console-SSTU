@@ -1,5 +1,7 @@
 package ru.rud.main;
 
+import ru.rud.geometry.Point;
+import ru.rud.geometry.Polyline;
 import ru.rud.trafficlight.TrafficLights;
 
 import ru.rud.unsorted.NewName;
@@ -166,17 +168,23 @@ public class Main {
 //        stn.visit(scr);
 
 //        -----------CW 18.12.21------------
-        NewName a = new NewName.BuilderName().setName("Даниил").setSecondName("Александрович").build();
-        System.out.println(a);
+//        NewName a = new NewName.BuilderName().setName("Даниил").setSecondName("Александрович").build();
+//        System.out.println(a);
 
+        // Создание трёх точек (Point)
+        Point p1 = new Point(1,1);
+        Point p2 = new Point(2,2);
+        Point p3 = new Point(3,3);
 
+        // Создание пустой ломанной
+        Polyline pol = new Polyline();
 
+        // Добавление точек в ломанную
+        pol.addPoint(p1,p2,p3);
+        System.out.println(pol);
 
-
-
-
-
-
+        // Длина ломаной
+        System.out.println(pol.getLength());
 
 
     }
